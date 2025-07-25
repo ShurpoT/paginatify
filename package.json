@@ -1,0 +1,45 @@
+{
+    "name": "paginatify",
+    "private": false,
+    "version": "0.0.1",
+    "type": "module",
+    "author": "ShurpoT",
+    "license": "MIT",
+    "description": "A lightweight, simple, and customizable React pagination.",
+    "keywords": [
+        "paginatify",
+        "pagination",
+        "react",
+        "react-pagination"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ShurpoT/paginatify.git"
+    },
+    "scripts": {
+        "dev": "vite",
+        "test": "vitest",
+        "test:coverage": "vitest --coverage",
+        "build": "tsc -b && vite build",
+        "lint": "eslint .",
+        "preview": "vite preview"
+    },
+    "peerDependencies": {
+        "react": "^18.0.0",
+        "react-dom": "^18.0.0"
+    },
+    "devDependencies": {
+        "@eslint/js": "^9.15.0",
+        "@types/react": "^18.3.12",
+        "@types/react-dom": "^18.3.1",
+        "@vitejs/plugin-react-swc": "^3.5.0",
+        "eslint": "^9.15.0",
+        "eslint-plugin-react-hooks": "^5.0.0",
+        "eslint-plugin-react-refresh": "^0.4.14",
+        "globals": "^15.12.0",
+        "typescript": "~5.6.2",
+        "typescript-eslint": "^8.15.0",
+        "vite": "^6.0.0",
+        "vitest": "^3.0.5"
+    }
+}
