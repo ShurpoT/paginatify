@@ -7,7 +7,6 @@
         "esModuleInterop": true,
         "skipLibCheck": true,
         "jsx": "react-jsx",
-        "types": ["vitest/globals", "@testing-library/jest-dom"],
         "declaration": true,
         "declarationDir": "paginatify",
         "outDir": "paginatify",

@@ -4,6 +4,8 @@ import dts from "vite-plugin-dts";
 
 // https://vite.dev/config/
 export default defineConfig({
+    publicDir: false,
+
     server: {
         port: 5173,
         open: true,
