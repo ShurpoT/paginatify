@@ -16,23 +16,23 @@ import { useState } from "react";
 interface IPaginatify {
     className?: string;
 
-    paginatifySize: number;
-    paginatifyStep?: number;
+    pageCount: number;
+    step?: number;
     onPageChange: (pageNumber: number) => void;
 }
 
-export const Paginatify = ({ className = "paginatify", paginatifySize, paginatifyStep = 2, onPageChange }: IPaginatify) => {
+export const Paginatify = ({ className = "paginatify", pageCount, step = 2, onPageChange }: IPaginatify) => {
     const [currentPage, setCurrentPage] = useState(1),
         // pageChange = useCallback(
         //     throttle((pageNumber) => {
-        //         if (pageNumber < 1 || pageNumber > paginatifySize) return;
+        //         if (pageNumber < 1 || pageNumber > pageCount) return;
         //         onPageChange(pageNumber);
         //         setCurrentPage(pageNumber);
         //     }, 1000),
         //     []
         // ),
         pageChange = (pageNumber: number) => {
-            if (pageNumber < 1 || pageNumber > paginatifySize) return;
+            if (pageNumber < 1 || pageNumber > pageCount) return;
             onPageChange(pageNumber);
             setCurrentPage(pageNumber);
         },
@@ -42,7 +42,7 @@ export const Paginatify = ({ className = "paginatify", paginatifySize, paginatif
             </li>
         ),
         first = () => [...add(1, 2), createBreak("fb")],
-        last = () => [createBreak("lb"), ...add(paginatifySize, paginatifySize + 1)],
+        last = () => [createBreak("lb"), ...add(pageCount, pageCount + 1)],
         add = (start: number, end: number) =>
             Array.from({ length: end - start }, (_, i) => {
                 const numb = start + i;
@@ -56,7 +56,7 @@ export const Paginatify = ({ className = "paginatify", paginatifySize, paginatif
                 );
             });
 
-    if (!paginatifySize) return;
+    if (!pageCount) return;
 
     return (
         <ul className={className}>
@@ -67,21 +67,21 @@ export const Paginatify = ({ className = "paginatify", paginatifySize, paginatif
                 ◄
             </li>
 
-            {paginatifySize < paginatifyStep * 2 + 6
-                ? add(1, paginatifySize + 1)
-                : currentPage < paginatifyStep * 2 + 2
-                ? [...add(1, paginatifyStep * 2 + 4), last()]
-                : currentPage > paginatifySize - paginatifyStep * 2 - 1
-                ? [first(), ...add(paginatifySize - paginatifyStep * 2 - 2, paginatifySize + 1)]
-                : [first(), ...add(currentPage - paginatifyStep, currentPage + paginatifyStep + 1), last()]}
+            {pageCount < step * 2 + 6
+                ? add(1, pageCount + 1)
+                : currentPage < step * 2 + 2
+                ? [...add(1, step * 2 + 4), last()]
+                : currentPage > pageCount - step * 2 - 1
+                ? [first(), ...add(pageCount - step * 2 - 2, pageCount + 1)]
+                : [first(), ...add(currentPage - step, currentPage + step + 1), last()]}
 
             <li key="CT" className={`${className}__counter`}>
-                {currentPage} / {paginatifySize}
+                {currentPage} / {pageCount}
             </li>
 
             <li
                 key="n"
-                className={`${className}__arrow--next${currentPage === paginatifySize ? ` ${className}__arrow--disabled` : ""}`}
+                className={`${className}__arrow--next${currentPage === pageCount ? ` ${className}__arrow--disabled` : ""}`}
                 onClick={() => pageChange(currentPage + 1)}>
                 ►
             </li>
