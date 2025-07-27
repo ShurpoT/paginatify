@@ -28,12 +28,12 @@ A lightweight, simple, and customizable React pagination.
 
 <div align="center" >
 
-| Name             |    Type    | Default       | Description                                |
-| ---------------- | :--------: | :------------ | :----------------------------------------- |
-| `className`      |  `String`  | `.paginatify` | The classname of the pagination container. |
-| `paginatifySize` |  `Number`  | `-`           | **Required.** The total number of pages.   |
-| `paginatifyStep` |  `Number`  | `0`           | Pages before and after current.            |
-| `onPageChange`   | `Function` | `-`           | The method to call when a page is changed. |
+| Name           | Type       | Default        | Description                                              |
+| -------------- | :--------- | :------------- | :------------------------------------------------------- |
+| `className`    | `String`   | `"paginatify"` | The classname of the pagination container.               |
+| `pageCount`    | `Number`   | `-`            | **Required.** The total number of pages.                 |
+| `step`         | `Number`   | `0`            | Pages before and after current.                          |
+| `onPageChange` | `Function` | `-`            | **Required.** The method to call when a page is changed. |
 
 </div>
 
@@ -70,7 +70,7 @@ import { Paginatify } from "paginatify";
 ```
 
 ```jsx
-<Paginatify className="YOUR_PAGINATION" paginatifySize={paginatifyLength} onPageChange={handlePageClick} paginatifyStep={3} />
+<Paginatify className="paginatify" pageCount={pageCount} step={3} onPageChange={handleClick} />
 ```
 
 <br/>
