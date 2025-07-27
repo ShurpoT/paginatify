@@ -24,17 +24,7 @@
 
 A lightweight, simple, and customizable React pagination.
 
-[![NPM](https://nodei.co/npm/paginatify.png?downloads=true)](https://nodei.co/npm/paginatify/)
-
-</div>
-<br/>
-<br/>
-
-<div align="center">
-
-## Preview
-
-<div align="center">
+<!-- [![NPM](https://nodei.co/npm/paginatify.png?downloads=true)](https://nodei.co/npm/paginatify/) -->
 
 ![Paginatify Preview](https://github.com/ShurpoT/paginatify/blob/main/images/preview.jpg?raw=true)
 
@@ -43,11 +33,9 @@ A lightweight, simple, and customizable React pagination.
 <br/>
 <br/>
 
-## Props
-
-</div>
-
 <div align="center" >
+
+## Props
 
 | Name           | Type       | Default        | Description                                              |
 | -------------- | :--------- | :------------- | :------------------------------------------------------- |
