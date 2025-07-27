@@ -80,7 +80,7 @@ import { Paginatify } from "paginatify";
 ```
 
 ```jsx
-<Paginatify className="paginatify" pageCount={pageCount} step={3} onPageChange={handleClick} />
+<Paginatify className="YOUR_PAGINATION" pageCount={pageCount} step={3} onPageChange={handleClick} />
 ```
 
 <br/>
