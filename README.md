@@ -23,6 +23,8 @@
 <div align="center" style="font-size:20px">
 
 A lightweight, simple, and customizable React pagination.
+<br/>
+<br/>
 
 <!-- [![NPM](https://nodei.co/npm/paginatify.png?downloads=true)](https://nodei.co/npm/paginatify/) -->
 
