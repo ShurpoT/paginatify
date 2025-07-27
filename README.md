@@ -104,7 +104,6 @@ import { Paginatify } from "paginatify";
 
     list-style: none;
 }
-
 .YOUR_PAGINATION__page,
 .YOUR_PAGINATION__break,
 .YOUR_PAGINATION__arrow--prev,
@@ -115,6 +114,11 @@ import { Paginatify } from "paginatify";
 
     width: 50px;
     height: 50px;
+
+    border: 2px solid #ff5500;
+    border-radius: 50%;
+
+    transition: background-color 0.2s linear;
 
     cursor: pointer;
 }
@@ -129,19 +133,21 @@ import { Paginatify } from "paginatify";
 }
 
 .YOUR_PAGINATION__arrow--prev {
-    background-image: url("");
+    background-image: url("../../../public/images/arrows/arrow-prev.svg");
 }
 
 .YOUR_PAGINATION__arrow--next {
-    background-image: url("");
+    background-image: url("../../../public/images/arrows/arrow-next.svg");
 }
 
 .YOUR_PAGINATION__page:hover,
 .YOUR_PAGINATION__arrow--prev:hover:not(.YOUR_PAGINATION__arrow--disabled),
 .YOUR_PAGINATION__arrow--next:hover:not(.YOUR_PAGINATION__arrow--disabled) {
+    background-color: #ff5500;
 }
 
 .YOUR_PAGINATION__page--active {
+    background-color: #ff5500;
 }
 
 .YOUR_PAGINATION__arrow--disabled {
@@ -149,6 +155,8 @@ import { Paginatify } from "paginatify";
 }
 
 .YOUR_PAGINATION__break {
+    border: none;
+    font-size: 32px;
     opacity: 0.5;
 
     cursor: default;
@@ -169,7 +177,6 @@ import { Paginatify } from "paginatify";
     .YOUR_PAGINATION__break {
         display: none;
     }
-
     .YOUR_PAGINATION__counter {
         display: flex;
     }
