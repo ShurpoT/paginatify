@@ -1,5 +1,15 @@
 <div align="center">
 
+[![npm version](https://img.shields.io/npm/v/paginatify.svg)](https://www.npmjs.com/package/paginatify)
+[![Bundle size](https://img.shields.io/bundlephobia/minzip/paginatify)](https://bundlephobia.com/result?p=paginatify)
+[![BEM Methodology](https://img.shields.io/badge/Methodology-BEM-F2C94C)](https://en.bem.info/methodology/quick-start/)
+[![Downloads](https://img.shields.io/npm/dm/paginatify.svg)](https://www.npmjs.com/package/paginatify)
+[![License](https://img.shields.io/npm/l/paginatify.svg)](https://opensource.org/licenses/MIT)
+
+</div>
+
+<div align="center">
+
 ![Paginatify Preview](https://github.com/ShurpoT/paginatify/blob/main/images/Logo.png?raw=true)
 
 </div>
@@ -14,7 +24,7 @@
 
 A lightweight, simple, and customizable React pagination.
 
-<!-- [![NPM](https://nodei.co/npm/sliderfy.png?downloads=true)](https://nodei.co/npm/sliderfy/) -->
+[![NPM](https://nodei.co/npm/paginatify.png?downloads=true)](https://nodei.co/npm/paginatify/)
 
 </div>
 <br/>
