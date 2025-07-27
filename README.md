@@ -32,6 +32,17 @@ A lightweight, simple, and customizable React pagination.
 
 <div align="center">
 
+## Preview
+
+<div align="center">
+
+![Paginatify Preview](https://github.com/ShurpoT/paginatify/blob/main/images/preview.jpg?raw=true)
+
+</div>
+
+<br/>
+<br/>
+
 ## Props
 
 </div>
