@@ -37,13 +37,13 @@ function App() {
             .finally(() => setIsLoading(false));
     }, [currentPage]);
 
-    const handlePageClick = (i: number) => {
+    const handleClick = (i: number) => {
         setCurrentPage(i);
     };
 
     return (
         <>
-            <Paginatify className="paginatify" pageCount={pageCount} step={3} onPageChange={handlePageClick} />
+            <Paginatify className="paginatify" pageCount={pageCount} step={3} onPageChange={handleClick} />
 
             {/* ==== YOUR CONTENT ==== */}
             {isLoading ? (
