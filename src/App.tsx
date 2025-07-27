@@ -15,7 +15,7 @@ const perPage = 4;
 
 function App() {
     const [items, setItems] = useState<Data[]>([]);
-    const [paginatifyLength, setPaginatifyLength] = useState(0);
+    const [pageCount, setPageCount] = useState(0);
     const [currentPage, setCurrentPage] = useState(1);
     const [isLoading, setIsLoading] = useState(true);
 
@@ -33,7 +33,7 @@ function App() {
         // Method for fetching all data and calculating the pagination length.
         fetch(`https://jsonplaceholder.typicode.com/photos`)
             .then((res) => res.json())
-            .then((data) => setPaginatifyLength(Math.ceil(data.length / perPage)))
+            .then((data) => setPageCount(Math.ceil(data.length / perPage)))
             .finally(() => setIsLoading(false));
     }, [currentPage]);
 
@@ -43,12 +43,7 @@ function App() {
 
     return (
         <>
-            <Paginatify
-                className="paginatify"
-                paginatifySize={paginatifyLength}
-                paginatifyStep={3}
-                onPageChange={handlePageClick}
-            />
+            <Paginatify className="paginatify" pageCount={pageCount} step={3} onPageChange={handlePageClick} />
 
             {/* ==== YOUR CONTENT ==== */}
             {isLoading ? (
