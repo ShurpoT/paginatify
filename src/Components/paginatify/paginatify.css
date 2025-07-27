@@ -1,4 +1,4 @@
-.paginatify {
+.YOUR_PAGINATION {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -6,10 +6,10 @@
 
     list-style: none;
 }
-.paginatify__page,
-.paginatify__break,
-.paginatify__arrow--prev,
-.paginatify__arrow--next {
+.YOUR_PAGINATION__page,
+.YOUR_PAGINATION__break,
+.YOUR_PAGINATION__arrow--prev,
+.YOUR_PAGINATION__arrow--next {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,11 +17,16 @@
     width: 50px;
     height: 50px;
 
+    border: 2px solid #ff5500;
+    border-radius: 50%;
+
+    transition: background-color 0.2s linear;
+
     cursor: pointer;
 }
 
-.paginatify__arrow--prev,
-.paginatify__arrow--next {
+.YOUR_PAGINATION__arrow--prev,
+.YOUR_PAGINATION__arrow--next {
     background-size: 15px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -29,33 +34,37 @@
     font-size: 0;
 }
 
-.paginatify__arrow--prev {
+.YOUR_PAGINATION__arrow--prev {
     background-image: url("../../../public/images/arrows/arrow-prev.svg");
 }
 
-.paginatify__arrow--next {
+.YOUR_PAGINATION__arrow--next {
     background-image: url("../../../public/images/arrows/arrow-next.svg");
 }
 
-.paginatify__page:hover,
-.paginatify__arrow--prev:hover:not(.paginatify__arrow--disabled),
-.paginatify__arrow--next:hover:not(.paginatify__arrow--disabled) {
+.YOUR_PAGINATION__page:hover,
+.YOUR_PAGINATION__arrow--prev:hover:not(.YOUR_PAGINATION__arrow--disabled),
+.YOUR_PAGINATION__arrow--next:hover:not(.YOUR_PAGINATION__arrow--disabled) {
+    background-color: #ff5500;
 }
 
-.paginatify__page--active {
+.YOUR_PAGINATION__page--active {
+    background-color: #ff5500;
 }
 
-.paginatify__arrow--disabled {
+.YOUR_PAGINATION__arrow--disabled {
     opacity: 0.5;
 }
 
-.paginatify__break {
+.YOUR_PAGINATION__break {
+    border: none;
+    font-size: 32px;
     opacity: 0.5;
 
     cursor: default;
 }
 
-.paginatify__counter {
+.YOUR_PAGINATION__counter {
     display: none;
     justify-content: center;
     align-items: center;
@@ -63,14 +72,14 @@
 
 /* 
     Don't forget to show the counter on small screens!
-    Replace 720px with the resolution you need. 
+    Replace 1024px with the resolution you need. 
  */
 @media (max-width: 1024px) {
-    .paginatify__page,
-    .paginatify__break {
+    .YOUR_PAGINATION__page,
+    .YOUR_PAGINATION__break {
         display: none;
     }
-    .paginatify__counter {
+    .YOUR_PAGINATION__counter {
         display: flex;
     }
 }
