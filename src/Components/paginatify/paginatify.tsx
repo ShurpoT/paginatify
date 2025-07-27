@@ -2,32 +2,40 @@ import { useState } from "react";
 
 // import "./paginatify.css";
 
-const throttle = <T extends (...args: any[]) => any>(func: T, ms: number): ((...args: Parameters<T>) => void) => {
-    let lastCall = 0;
-    return function (...args: Parameters<T>) {
-        const now = Date.now();
-        if (now - lastCall >= ms) {
-            lastCall = now;
-            return func(...args);
-        }
-    };
-};
+// const throttle = <T extends (...args: any[]) => any>(func: T, ms: number): ((...args: Parameters<T>) => void) => {
+//     let lastCall = 0;
+//     return function (...args: Parameters<T>) {
+//         const now = Date.now();
+//         if (now - lastCall >= ms) {
+//             lastCall = now;
+//             return func(...args);
+//         }
+//     };
+// };
 
 interface IPaginatify {
     className?: string;
 
     paginatifySize: number;
     paginatifyStep?: number;
-    onPageChange: (i: number) => void;
+    onPageChange: (pageNumber: number) => void;
 }
 
 export const Paginatify = ({ className = "paginatify", paginatifySize, paginatifyStep = 2, onPageChange }: IPaginatify) => {
     const [currentPage, setCurrentPage] = useState(1),
-        pageChange = throttle((pageNumber) => {
+        // pageChange = useCallback(
+        //     throttle((pageNumber) => {
+        //         if (pageNumber < 1 || pageNumber > paginatifySize) return;
+        //         onPageChange(pageNumber);
+        //         setCurrentPage(pageNumber);
+        //     }, 1000),
+        //     []
+        // ),
+        pageChange = (pageNumber: number) => {
             if (pageNumber < 1 || pageNumber > paginatifySize) return;
             onPageChange(pageNumber);
             setCurrentPage(pageNumber);
-        }, 1000),
+        },
         createBreak = (key: string) => (
             <li key={key} className={`${className}__break`}>
                 ...
