@@ -129,11 +129,11 @@ import { Paginatify } from "paginatify";
 }
 
 .YOUR_PAGINATION__arrow--prev {
-    background-image: url("../../../public/images/arrows/arrow-prev.svg");
+    background-image: url("");
 }
 
 .YOUR_PAGINATION__arrow--next {
-    background-image: url("../../../public/images/arrows/arrow-next.svg");
+    background-image: url("");
 }
 
 .YOUR_PAGINATION__page:hover,
@@ -162,7 +162,7 @@ import { Paginatify } from "paginatify";
 
 /*
     Don't forget to show the counter on small screens!
-    Replace 720px with the resolution you need.
+    Replace 1024px with the resolution you need.
  */
 @media (max-width: 1024px) {
     .YOUR_PAGINATION__page,
